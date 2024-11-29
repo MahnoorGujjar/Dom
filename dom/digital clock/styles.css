@@ -1,0 +1,71 @@
+/* General body styles */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;  /* Vertically align heading and clock */
+    height: 100vh;
+    margin: 0;
+    /* background: linear-gradient(120deg, #d4e979, #dc7bdf, #a6da5c); Light gradient colors */
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+/* Heading style (placed above the clock) */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 60px; /* Reduced margin */
+    cursor: pointer;
+    text-align: center;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for text */
+}
+
+h1:hover {
+    border-bottom: 3px solid #fff;
+    padding-bottom: 10px;
+    color: #1889d4; /* Hover effect color */
+}
+
+/* Clock container styling */
+.clock {
+    font-size: 8vw; /* Font size relative to viewport width */
+    color: #f2f5f7;
+    /* background: linear-gradient(135deg, #add8e6, #f0e68c, #ffb6c1); Light pastel gradient */
+    background-color: black;
+    padding: 7vw 3vw; /* Adjust padding for better alignment */
+     border-radius: 60px; /*Circle shape */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow */
+    text-align: center;
+    transition: all 0.3s ease; /* Smooth transition for hover */
+}
+
+/* Hover effect for the clock */
+.clock:hover {
+    /* background-color: rgb(3, 31, 62);*/
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgb(2, 0, 24) 0%, rgba(3, 28, 97, 0.925) 35%, rgb(16, 99, 116) 100%); 
+    color: white;
+    border-radius: 50%;
+    transform: scale(1.1); /* Slightly enlarge the clock on hover */
+}  
+
+/* Media query for tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    .clock {
+        font-size: 12vw; /* Larger font for tablets */
+        padding: 8vw 10vw; /* Adjust padding for smaller devices */
+    }
+}
+
+/* Media query for small screens (max-width: 480px) */
+@media (max-width: 480px) {
+    .clock {
+        font-size: 16vw; /* Even larger font for mobile devices */
+        padding: 10vw 12vw; /* Adjust padding accordingly */
+    }
+}
